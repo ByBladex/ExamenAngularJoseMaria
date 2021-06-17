@@ -1,0 +1,6 @@
+<div class="container">
+    <h1>Alternar entre Formulario/Listado</h1>
+    <button (click)="getAlternado()">Alternar</button>
+</div>
+<app-formulario [hidden]="alternado"></app-formulario>
+<app-listado [hidden]="!alternado"></app-listado>

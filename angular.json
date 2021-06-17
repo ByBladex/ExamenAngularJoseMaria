@@ -119,6 +119,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "ExamenAngularJoseMaria"
+    }
+  },
+  "defaultProject": "ExamenAngularJoseMaria",
+  "cli": {
+    "analytics": false
+  }
 }

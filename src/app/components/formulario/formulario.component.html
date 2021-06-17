@@ -1,0 +1,13 @@
+<div class="container">
+    <form [formGroup]="formValidado">
+        <div>
+            <input type="text" formControlName="nombre" placeholder="Usuario" [ngClass]="{'invalid':this.formValidado.controls.nombre.invalid && this.formValidado.controls.nombre.touched}">
+        </div>
+        <div *ngIf="this.formValidado.invalid && this.formValidado.touched" class="invalidText">*Campo usuario obligatorio</div>
+        <div>
+            <input type="password" formControlName="clave" placeholder="Contraseña" [ngClass]="{'invalid':this.formValidado.controls.clave.invalid && this.formValidado.controls.clave.touched}">
+        </div>
+        <div *ngIf="this.formValidado.invalid && this.formValidado.touched" class="invalidText">*Campo contraseña debe contener minimo 8 caracteres</div>
+        <button [disabled]="this.formValidado.invalid" (click)="registro()">Registrar</button>
+    </form>
+</div>
